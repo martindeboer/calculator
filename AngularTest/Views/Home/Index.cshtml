@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    @{
+        @Html.Partial("~/Views/Shared/_StyleSheets.cshtml");
+    }
+</head>
+<body ng-app="app" ng-controller="AngularTestController">
+    <div ui-view>
+
+    </div>
+    @{
+        @Html.Partial("~/Views/Shared/_Scripts.cshtml");
+    }
+</body>
+</html>

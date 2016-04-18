@@ -1,0 +1,39 @@
+﻿<div layout-align="space-around center">
+    <div layout="row">
+        <md-content class="oh-bg" md-scroll-y layout="column">
+            <div ng-repeat="palinDrome in ctrl.palinDromes track by $index">
+                {{palinDrome}}
+            </div>
+        </md-content>
+    </div>
+    <div layout="row">
+        <div layout="column">
+            Minimum length
+        </div>
+        <div layout="column">
+            <md-input-container>
+                <input type="number" maxlength="3" ng-model="ctrl.minLength" ng-change="ctrl.minChanged()" min="1" max="100">
+            </md-input-container>
+        </div>
+        <div layout="column">
+            Maximum length
+        </div>
+        <div layout="column">
+            <md-input-container>
+                <input type="number" maxlength="3" ng-model="ctrl.maxLength" ng-change="ctrl.maxChanged()" min="1" max="100">
+            </md-input-container>
+        </div>
+    </div>
+    <div layout="row">
+        <div layout="column">
+            <md-button ng-click="ctrl.cmdStartOnClick()">
+                START
+            </md-button>
+        </div>
+        <div layout="column" ng-click="ctrl.cmdStopOnClick()">
+            <md-button>
+                STOP
+            </md-button>
+        </div>
+    </div>
+</div>
